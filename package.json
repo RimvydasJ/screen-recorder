@@ -1,15 +1,16 @@
 {
   "name": "video-recorder",
-  "productName": "video-recorder",
+  "productName": "Video Recorder",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "src/index.js",
   "scripts": {
-    "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "build": "./node_modules/.bin/tsc",
+    "watch": "tsc -w",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "start": "npm run build && electron ./dist/index.js"
   },
   "keywords": [],
   "author": {
@@ -45,7 +46,12 @@
     }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "@types/dom-mediacapture-record": "^1.0.7",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "eslint": "^7.3.1",
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.55",
