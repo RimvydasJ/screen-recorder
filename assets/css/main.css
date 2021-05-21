@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'open_sans';
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background-color: white;
+    font-family: "open_sans";
+}
+
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.container {
+    margin: 1%;
+}
+
+.video-container {
+    border-radius: 5px;
+    height: 70%;
+    justify-self: flex-start;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+}
+
+.button-container{
+    justify-self: flex-end;
+    height:30%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
